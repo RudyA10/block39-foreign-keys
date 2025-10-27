@@ -2,8 +2,8 @@ import express from "express";
 const router = express.Router();
 export default router;
 
-import { createFile } from "./queries/files";
-import { getFolderByIdIncludingFiles, getFolders } from "./queries/folders";
+import { createFile } from "../queries/files.js";
+import { getFolderByIdIncludingFiles, getFolders } from "../queries/folders.js";
 
 router.route("/").get(async (req, res) => {
   const folders = await getFolders();
